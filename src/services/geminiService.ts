@@ -5,7 +5,7 @@ const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "" }
 export const generateContent = async (prompt: string, systemInstruction: string) => {
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
-      model: "gemini-3.1-pro-preview",
+      model: "gemini-3-flash-preview",
       contents: [{ parts: [{ text: prompt }] }],
       config: {
         systemInstruction,
